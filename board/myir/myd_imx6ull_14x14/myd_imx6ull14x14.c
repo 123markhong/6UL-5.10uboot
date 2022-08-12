@@ -396,7 +396,7 @@ int board_init(void)
 #ifdef CONFIG_NAND_MXS
 	setup_gpmi_nand();
 #endif
-
+	printk("board_init ok!\n");
 	return 0;
 }
 

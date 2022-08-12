@@ -11,7 +11,7 @@
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input.h>
 #include <dt-bindings/interrupt-controller/arm-gic.h>
-#include "imx6ul-pinfunc.h"
+#include "imx6ulg2-pinfunc.h"
 
 / {
 	#address-cells = <1>;
