@@ -4,7 +4,7 @@ make distclean
 make myd_imx6ull_nand_ddr256_defconfig
 #make myd_imx6ul_emmc_defconfig 
 #make myd_imx6ul_nand_ddr256_defconfig
-make myd_imx6ull_emmc_defconfig
+#make myd_imx6ull_emmc_defconfig
 make  -j16
 
 #mkdir -p $PWD/../build

@@ -263,6 +263,7 @@ int board_phy_config(struct phy_device *phydev)
 
 // #define CONFIG_VIDEO_MXS 1
 #ifdef CONFIG_VIDEO_MXS
+//#ifdef CONFIG_DM_VIDEO
 static iomux_v3_cfg_t const lcd_pads[] = {
 	MX6_PAD_LCD_CLK__LCDIF_CLK | MUX_PAD_CTRL(LCD_PAD_CTRL),
 	MX6_PAD_LCD_ENABLE__LCDIF_ENABLE | MUX_PAD_CTRL(LCD_PAD_CTRL),
@@ -311,7 +312,7 @@ void do_enable_parallel_lcd(struct display_info_t const *dev)
 	// gpio_direction_output(IMX_GPIO_NR(5, 9) , 0);
 	// udelay(500);
 	// gpio_direction_output(IMX_GPIO_NR(5, 9) , 1);
-
+       //printk("enable_lcd ok!\n");
 	/* Set Brightness to high */
 	gpio_request(IMX_GPIO_NR(1, 8), "backlight");
 	gpio_direction_output(IMX_GPIO_NR(1, 8) , 1);
@@ -364,6 +365,7 @@ struct display_info_t const displays[] = {
        },
 
 };
+
 size_t display_count = ARRAY_SIZE(displays);
 #endif
 
@@ -396,7 +398,7 @@ int board_init(void)
 #ifdef CONFIG_NAND_MXS
 	setup_gpmi_nand();
 #endif
-	printk("board_init ok!\n");
+	printk("board_init ok\n");
 	return 0;
 }
 
